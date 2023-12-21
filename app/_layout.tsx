@@ -5,6 +5,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { vars } from "nativewind";
 import { memo, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -50,11 +51,10 @@ const theme = vars({
 
 function RootLayoutNav() {
   return (
-    <View style={[theme, StyleSheet.absoluteFill]}>
+    <SafeAreaView style={[theme, StyleSheet.absoluteFill]}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
       </Stack>
-    </View>
+    </SafeAreaView>
   );
 }
