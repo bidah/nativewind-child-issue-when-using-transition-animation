@@ -5,15 +5,15 @@ import { Pressable, Text, View } from "react-native";
 const Home = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <View className="flex-1 bg-white justify-end items-end p-8 pb-28">
-      <Pressable className="" onPress={() => setToggle(!toggle)}>
+    <View className="flex-1 bg-white justify-end items-center p-8 pb-28">
+      <Pressable className="mb-20" onPress={() => setToggle(!toggle)}>
         <Text className="text-black text-6xl">Toggle</Text>
       </Pressable>
       <View
         className={cn(
-          "duration-500 bg-black rounded-[100%] w-[50] h-[50] items-center justify-center",
-          "transition translate translate-y-0 transform",
-          toggle && "translate-y-20 rounded-[10%]"
+          "bg-blue-200 rounded-[100%] w-[50] h-[50] items-center justify-center",
+          "transition scale-[1]",
+          toggle && "scale-[2] rounded-[10%]"
         )}
       >
         {/* <Text className="text-white text-6xl">+</Text> */}
