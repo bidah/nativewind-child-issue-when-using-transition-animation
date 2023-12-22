@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
+import { Entypo } from "@expo/vector-icons";
 
 const Home = () => {
   const [toggle, setToggle] = useState(false);
@@ -11,12 +12,12 @@ const Home = () => {
       </Pressable>
       <View
         className={cn(
-          "bg-blue-200 rounded-[100%] w-[50] h-[50] items-center justify-center",
+          "bg-black rounded-[100%] w-[50] h-[50] items-center justify-center",
           "transition scale-[1]",
           toggle && "scale-[2] rounded-[10%]"
         )}
       >
-        {/* <Text className="text-white text-6xl">+</Text> */}
+        <Entypo name="plus" size={24} color="white" />
       </View>
     </View>
   );
